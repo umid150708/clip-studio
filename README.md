@@ -1,6 +1,8 @@
-# podcast-clip-studio
+# clip-studio
 
-A Claude Code skill for clipping long podcasts, interviews and press conferences into vertical shorts, built while clipping real episodes for a paid campaign.
+This repository holds one Claude Code skill, `podcast-clip-studio`.
+
+It clips long podcasts, interviews and press conferences into vertical shorts, and was built while clipping real episodes for a paid campaign.
 
 It finds the moments viewers actually replay, cuts a hook-first clip, reframes it with a head-tracking camera, adds relevant 3-second cutaways and burned-in captions, and runs a checklist before anything is exported. It pairs with Nate Herk's [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) for the tight cutting and captioning steps.
 
@@ -16,8 +18,8 @@ It finds the moments viewers actually replay, cuts a hook-first clip, reframes i
 ## Install
 
 ```bash
-git clone https://github.com/<you>/podcast-clip-studio
-cp -R podcast-clip-studio/skills/podcast-clip-studio ~/.claude/skills/
+git clone https://github.com/umid150708/clip-studio
+cp -R clip-studio/skills/podcast-clip-studio ~/.claude/skills/
 ```
 
 Optional but recommended: install [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) so the `cut-silences`, `cut-mistakes` and `short-form-edit` skills are available.
