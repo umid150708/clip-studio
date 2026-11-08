@@ -47,4 +47,18 @@ with tempfile.TemporaryDirectory() as td:
     check([x["w"] for x in win] == ["big", "world"] and abs(win[0]["s"] - 0.1) < 1e-9, "window relative to the clip start")
     q = os.path.join(td, "w.json"); json.dump([dict(w="a", s=1.0, e=1.2)], open(q, "w"))
     check(R.load_words(q, 0.5)[0]["s"] == 1.5, "plain list accepted")
+
+# loudness chain: a quiet source (about -30 LUFS, bursts every 0.7 s) mastered to -12 LUFS must end under -1 dBTP after the AAC encode
+import subprocess, tempfile, measure as MS
+with tempfile.TemporaryDirectory() as td:
+    quiet = os.path.join(td, "quiet.wav")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "lavfi", "-i", "sine=f=300:duration=6", "-af",
+                    "volume='0.02+0.05*lt(mod(t,0.7),0.05)':eval=frame", "-ar", "44100", quiet], check=True)
+    af = R.loudness_args(quiet, 0, 6, -12)
+    check("linear=false" in af and "level=disabled" in af and "aresample=192000" in af, "chain: dynamic loudnorm, oversampled limiter, level off")
+    out = os.path.join(td, "out.m4a")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", quiet, "-vn", "-af", af, "-c:a", "aac", "-b:a", "192k", "-ar", "48000", out], check=True)
+    r = MS.loudness(out)
+    check(r["true_peak_dB"] <= R.CEILING_DBTP, f"quiet source: true peak {r['true_peak_dB']} dBTP is under the {R.CEILING_DBTP} ceiling")
+    check(abs(r["LUFS"] + 12) < 1.5, f"quiet source: loudness {r['LUFS']} LUFS near the -12 target")
 print(f"render: {ok} checks passed")

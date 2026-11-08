@@ -92,13 +92,22 @@ def camera_matrix(sw, sh, zoom, fx, fy, dx=0.0, dy=0.0, ow=OUT_W, oh=OUT_H):
 
 
 # ---------------------------------------------------------------- audio
-def loudness_args(src, start, dur, lufs, tp=-1.0):
-    """Two-pass loudnorm to the target (linear when it can be, otherwise ffmpeg falls back to dynamic) + a ceiling."""
-    f = f"loudnorm=I={lufs}:TP={tp}:LRA=7:print_format=json"
+LOUDNESS_TP = -1.5                 # loudnorm's true-peak target: dynamic mode keeps the peaks under it
+LIMIT_LINEAR = 10 ** (-2.0 / 20)   # the limiter at -2 dBFS, on a 4x-oversampled grid
+CEILING_DBTP = -1.0                # the promise: the finished file's true peak is at or below this
+
+
+def loudness_args(src, start, dur, lufs):
+    """Two-pass loudness master. Pass 1 measures the source. Pass 2 applies the gain in dynamic mode, which keeps the true peak under
+    LOUDNESS_TP, then a limiter on a 4x-oversampled grid catches the inter-sample peaks that the AAC encode adds.
+    Linear gain is not used: it applies the whole gain even when the peaks would go over the ceiling, and a sample-peak limiter cannot
+    catch those (a quiet 20 dB-gain test measured +4.4 dBTP that way)."""
+    f = f"loudnorm=I={lufs}:TP={LOUDNESS_TP}:LRA=11:print_format=json"
     err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-ss", f"{start}", "-t", f"{dur}", "-i", src, "-vn", "-af", f, "-f", "null", "-"], capture_output=True, text=True).stderr
     m = json.loads(err[err.rindex("{"): err.rindex("}") + 1])
-    return (f"loudnorm=I={lufs}:TP={tp}:LRA=7:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
-            f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true,alimiter=limit={10 ** (tp / 20):.3f}")
+    return (f"loudnorm=I={lufs}:TP={LOUDNESS_TP}:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}"
+            f":measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=false"
+            f",aresample=192000,alimiter=limit={LIMIT_LINEAR:.3f}:attack=1:release=50:level=disabled,aresample=48000")
 
 
 # ---------------------------------------------------------------- the render
@@ -157,7 +166,7 @@ def render(plan_path, out, lufs=None, peek=None):
         a_af = ["-af", loudness_args(a_src, a_ss, B["D"], lufs)] if lufs is not None else []
         enc = subprocess.Popen(["ffmpeg", "-y", "-v", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{OUT_W}x{OUT_H}", "-r", str(FPS), "-i", "-"]
                                + a_in + ["-map", "0:v", "-map", "1:a?", "-c:v", "libx264", "-preset", "medium", "-crf", "17",
-                                "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k"] + a_af + ["-shortest", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
+                                "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-ar", "48000"] + a_af + ["-shortest", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
     dec = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", f"{B['start']}", "-t", f"{B['D']}", "-i", B["src"], "-an", "-vf", f"fps={FPS}", "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
                            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
     sw, sh = B["sw"], B["sh"]; size = sw * sh * 3
@@ -215,3 +224,9 @@ if __name__ == "__main__":
         sys.exit(f"SOUND KIT: {e}")
     print(json.dumps(dict(out=a.out, duration=round(B["D"], 2), punches=B["mo"]["punches"], cuts=[c[0] for c in B["mo"]["cuts"]], captions=len(B["events"]), annotation_cues=AN.cue_times(B["anns"]), sound=B.get("sound_report"),
                           emphasis_found=len(B["emph"])), indent=1))
+    if a.lufs is not None and not a.peek:                  # the ceiling is a promise: check the file that was written
+        import measure
+        tp = measure.loudness(a.out)["true_peak_dB"]
+        print(f"true peak {tp} dBTP (ceiling {CEILING_DBTP})", file=sys.stderr)
+        if tp > CEILING_DBTP:
+            sys.exit(f"TRUE PEAK {tp} dBTP is above the {CEILING_DBTP} dBTP ceiling. The file was written to {a.out}; do not post it.")

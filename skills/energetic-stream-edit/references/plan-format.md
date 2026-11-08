@@ -130,4 +130,4 @@ python3 -I scripts/render.py plan.json out.mp4 --lufs -12        # master to -12
 python3 -I scripts/render.py plan.json out.mp4 --peek 1.0,3.0    # PNG stills at those times, nothing encoded
 ```
 
-The loudness stage is two-pass, so a mix that is already loud is turned down, not clipped. Without `--lufs` the audio stays at the level it came in.
+The loudness stage is two-pass. It keeps the true peak under −1 dBTP (dynamic gain, then a limiter on a 4× oversampled grid, then a 48 kHz output), and after the encode the render measures the file and stops with an error if the true peak is above −1 dBTP. A quiet source needs a lot of gain, and that is the case the check exists for. Without `--lufs` the audio stays at the level it came in, and no ceiling is applied.

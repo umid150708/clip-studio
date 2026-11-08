@@ -1,4 +1,6 @@
 schema_version: "1.1"
 name: names-the-moment-and-plans-first
 expected_outcome: |
-  The assistant plans the clip without fetching or exporting anything. It proposes a start and end time and a hook line, shows the captions and where zoom jumps go, names the sound kit clips it would use (real CC0 recordings, not synthesised), and offers a title with hashtags. It says it cannot hear the audio and asks the user to play the result before posting.
+  The assistant plans the clip from the supplied test-stream-clip.mp4 and test-stream-transcript.json3 without fetching or exporting anything. It proposes a start and end time and a hook line quoted from the transcript, shows the captions and where zoom jumps go, names the sound kit clips it would use (real CC0 recordings, not synthesised), and offers a title with hashtags. It says it cannot hear the audio and asks the user to play the result before posting.
+context:
+  scaffold_script: place-files.sh

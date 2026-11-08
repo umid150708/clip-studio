@@ -15,12 +15,14 @@ Two limits shape everything below. **The assistant cannot hear audio**, so every
 2. **Never draw a stand-in for something real.** A "chat window", a phone screen, a sign, a sound effect or a fight clip must be a real file the user supplies or a real recording from the kit. If the user asks for a chat screenshot and has none, ask for one. Do not build a fake interface, and do not synthesise a sound. The renderer refuses to fake a missing sound; if it says a kind is missing, tell the user and ask.
 3. **Say what you could not check.** Measurements cover loudness, timing, zoom and framing. They do not cover taste. End with "play it once before you post it".
 4. **Do not overclaim virality.** Six reference clips describe a style. They cannot show why a clip goes viral. Say so when the user asks for guarantees.
-5. **Keep the calm profile separate.** No sound effects in a campaign clip, and no viral-style colour captions in one, unless the user's brief says so.
+5. **Use only the files the user names.** Do not scan the user's folders, and do not read a file the user did not give you as the source.
+6. **Keep the calm profile separate.** No sound effects in a campaign clip, and no viral-style colour captions in one, unless the user's brief says so.
 
 ## Workflow
 
 ### 1. Get the source and the moment
-- Get the source file (or a URL to it, with permission) and the start and end times. Read the transcript at the start and end before deciding, so the hook is the first line and the clip ends on a line that lands.
+- Ask the user for the source file path (or a URL, with permission) and the start and end times. **Do not search the user's folders for a matching video.** A file that happens to match may not be the one the user means, and scanning folders they did not name is outside this skill's job. If no path is given, ask for it and stop.
+- Read the transcript at the start and end before deciding, so the hook is the first line and the clip ends on a line that lands. **Quote the hook from the transcript or the spoken words.** If no transcript is given, ask for one and mark the hook as a placeholder; never write a hook as if the streamer had said it.
 - A usable length is 14 to 37 seconds, the range the references use. Shorter needs a stronger hook.
 - If the user wants word-timed captions, get a word-timed transcript (YouTube auto-captions in json3 work, and `words_shift` moves them to clip time).
 
@@ -38,7 +40,7 @@ Look at the stills at the moments that matter: the hook, each annotation, each f
 ```bash
 python3 -I scripts/measure.py out.mp4
 ```
-It reports cuts per 10 seconds, zoom jumps in and out, the steady push-in, loudness, true peak and caption height, measured the same way as the six references. Compare with the ranges in `references/playbook.md`. Two things matter most: loudness between −10 and −14 LUFS, with true peak at or below about +1 dBTP, and a zoom jump every one to two seconds. If the numbers are off, change the plan and re-render; do not guess.
+It reports cuts per 10 seconds, zoom jumps in and out, the steady push-in, loudness, true peak and caption height, measured the same way as the six references. Compare with the ranges in `references/playbook.md`. Two things matter most: loudness between −10 and −14 LUFS, and true peak at or below −1 dBTP. The renderer checks the true peak after the encode and stops with an error above −1 dBTP, so a render that finished is under that ceiling. Also check a zoom jump every one to two seconds. If the numbers are off, change the plan and re-render; do not guess.
 
 ### 5. Title and hashtags
 Write a short title with one or two emoji, and two or three hashtags, such as `#edit` plus one word about the topic. Put the title in the reply, not in the video.

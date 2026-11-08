@@ -41,9 +41,16 @@ def main():
                       "cues": [{"t": 5.0, "kind": "fakeout"}]},
         }
         pp = os.path.join(td, "plan.json"); json.dump(plan, open(pp, "w"))
+        # a quiet source needs about 20 dB of gain: this is the case that once measured +4.4 dBTP
+        quiet = os.path.join(td, "quiet.mp4")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-af", "volume=0.05", "-c:v", "copy", "-c:a", "aac", quiet], check=True)
+        qplan = dict(plan, source=quiet); qp = os.path.join(td, "quiet_plan.json"); json.dump(qplan, open(qp, "w"))
+        qout = os.path.join(td, "quiet_out.mp4")
         out = os.path.join(td, "out.mp4")
         B = render.render(pp, out, lufs=-12)
         m = measure.measure(out)
+        render.render(qp, qout, lufs=-12)
+        mq = measure.loudness(qout)
         rep = B["sound_report"]
         probe = json.loads(subprocess.check_output(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,width,height,r_frame_rate,channels", "-of", "json", out]))
         v = next(s for s in probe["streams"] if s["codec_type"] == "video"); a = next(s for s in probe["streams"] if s["codec_type"] == "audio")
@@ -54,7 +61,8 @@ def main():
             (f"{len(rep['placements'])} sound placements (title, 3 annotations, flash, end line, fake-out riser + hit)", len(rep["placements"]) >= 9),
             (f"fake-out dip {rep['dips']}", rep["dips"] == [(4.7, 5.0)]),
             (f"loudness {m['LUFS']} LUFS (target -12)", abs(m["LUFS"] + 12) < 1.6),
-            (f"true peak {m['true_peak_dB']} dBTP (<= +0.6)", m["true_peak_dB"] <= 0.6),
+            (f"quiet source: true peak {mq['true_peak_dB']} dBTP (<= -1.0)", mq["true_peak_dB"] <= -1.0),
+            (f"true peak {m['true_peak_dB']} dBTP (<= -1.0)", m["true_peak_dB"] <= -1.0),
             (f"{m['jumps']} zoom jumps found", m["jumps"] >= 2),
             (f"yellow caption height {m['yellow_caption_centre_y']} (expect ~0.47)", m["yellow_caption_centre_y"] is None or abs(m["yellow_caption_centre_y"] - 0.47) < 0.06),
         ]
