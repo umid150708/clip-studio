@@ -1,0 +1,23 @@
+# secrets and local state
+.env
+.env.*
+*.env
+uploads.json
+crayo.env
+
+# working files made by the scripts
+meta/
+subs/
+segments/
+faces/
+edits/
+cutaways/
+finals/
+review/
+shorts/
+brand/
+sfx/
+__pycache__/
+*.pyc
+facetrack
+.DS_Store
