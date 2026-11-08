@@ -1,0 +1,127 @@
+{
+ "source": "Internet Archive, 'SSE Library' (USC Optical Sound Effects Library, digitised tapes), uploader jscott@archive.org",
+ "license": "CC0 1.0 Universal (public-domain dedication stated in each item's metadata: licenseurl https://creativecommons.org/publicdomain/zero/1.0/)",
+ "note": "Chosen from file titles only; nobody has listened to them. fetch_kit.py checks each file's md5; the kit build then measures each clip (length, peak, onset sharpness, rising trend for risers) before it is allowed into kit.json.",
+ "files": [
+  {
+   "id": "SSE_Library_EXPLOSIONS",
+   "name": "REAL/EXPLReal_Dull explosion_CS_USC.flac",
+   "size": 201633,
+   "md5": "d0922400a0b9b97864aa0d5e8962857a",
+   "kind": "impact",
+   "title": "Dull explosion"
+  },
+  {
+   "id": "SSE_Library_EXPLOSIONS",
+   "name": "REAL/EXPLReal_Heavy sharp explosion with reverb_CS_USC.flac",
+   "size": 282898,
+   "md5": "0104b0ba7c7f3cae13ea928eba68ab6e",
+   "kind": "impact",
+   "title": "Heavy sharp explosion with reverb"
+  },
+  {
+   "id": "SSE_Library_EXPLOSIONS",
+   "name": "REAL/EXPLReal_Single heavy explosions 1_CS_USC.flac",
+   "size": 456178,
+   "md5": "d25fa48bfcf62850dfcd7108f96cab9c",
+   "kind": "impact",
+   "title": "Single heavy explosions 1"
+  },
+  {
+   "id": "SSE_Library_EXPLOSIONS",
+   "name": "REAL/EXPLReal_Single heavy explosions 2_CS_USC.flac",
+   "size": 363989,
+   "md5": "78cc2e82971aea949d3e46a5ba47b8db",
+   "kind": "impact",
+   "title": "Single heavy explosions 2"
+  },
+  {
+   "id": "SSE_Library_FIGHT",
+   "name": "IMPACT/FGHTImpt_Fist crack; face punch_CS_USC.flac",
+   "size": 75662,
+   "md5": "197cb8ab23815145ede83bc780bd23ef",
+   "kind": "impact",
+   "title": "Fist crack; face punch"
+  },
+  {
+   "id": "SSE_Library_FIGHT",
+   "name": "IMPACT/FGHTImpt_Punch & body fall; short_CS_USC.flac",
+   "size": 159399,
+   "md5": "3006dac70baba8429b57f6987817734c",
+   "kind": "impact",
+   "title": "Punch & body fall; short"
+  },
+  {
+   "id": "SSE_Library_CARTOON",
+   "name": "POP/TOONPop_Comedy cartoon cork pop_CS_USC.flac",
+   "size": 100684,
+   "md5": "7f7dacff090036eda822dcc354fdc064",
+   "kind": "pop",
+   "title": "Comedy cartoon cork pop"
+  },
+  {
+   "id": "SSE_Library_MECHANICAL",
+   "name": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+   "size": 1469590,
+   "md5": "289f93c6fa9479766e149073d5a18190",
+   "kind": "click",
+   "title": "Metal clicks; several takes"
+  },
+  {
+   "id": "SSE_Library_SWOOSHES",
+   "name": "WHOOSH/WHSH-FIREWORKS_Fireworks launching swooshes_CS_USC.flac",
+   "size": 415719,
+   "md5": "8922ca6def65b13932942e69571b48e2",
+   "kind": "whoosh",
+   "title": "Fireworks launching swooshes"
+  },
+  {
+   "id": "SSE_Library_SWOOSHES",
+   "name": "SWISH/SWSH_Processed swishes_CS_USC.flac",
+   "size": 1748898,
+   "md5": "8b91828884905fb3cb4005ca11f721f5",
+   "kind": "whoosh",
+   "title": "Processed swishes"
+  },
+  {
+   "id": "SSE_Library_SCIFI",
+   "name": "DOOR/SCIDoor_Original Star Trek door swish_CS_USC.flac",
+   "size": 107598,
+   "md5": "885718d2fffe3f319a981f31b3fc70fb",
+   "kind": "whoosh",
+   "title": "Original Star Trek door swish"
+  },
+  {
+   "id": "SSE_Library_SCIFI",
+   "name": "MACHINE/SCIMach_Pulsing rising machine sound with roar from_CS_USC.flac",
+   "size": 3568088,
+   "md5": "5a18149da0fd8020c5e84bc53da02ade",
+   "kind": "riser",
+   "title": "Pulsing rising machine sound with roar"
+  },
+  {
+   "id": "SSE_Library_SCIFI",
+   "name": "RETRO/SCIRetro_Classic spaceship fast takeoff_CS_USC.flac",
+   "size": 469083,
+   "md5": "63f89763e0f29cfeb84ea87a1cee39c4",
+   "kind": "riser",
+   "title": "Classic spaceship fast takeoff"
+  },
+  {
+   "id": "SSE_Library_SCIFI",
+   "name": "ENERGY/SCIEnrg_Magneto with speed manipulations_CS_USC.flac",
+   "size": 334838,
+   "md5": "7189d37faa93676aea73c926eaeb95c1",
+   "kind": "riser",
+   "title": "Magneto with speed manipulations"
+  },
+  {
+   "id": "SSE_Library_DESIGNED",
+   "name": "RUMBLE/DSGNRmbl_Low and ominous sound; gathering storm; Paramount_CS_USC.flac",
+   "size": 1550255,
+   "md5": "d833ae82f804e598ce774aa685dbd130",
+   "kind": "riser",
+   "title": "Low and ominous sound; gathering storm"
+  }
+ ]
+}

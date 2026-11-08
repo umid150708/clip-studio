@@ -1,0 +1,540 @@
+{
+ "kinds": {
+  "impact": [
+   {
+    "file": "files/impact_dull_explosion.wav",
+    "title": "Dull explosion",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_EXPLOSIONS/REAL/EXPLReal_Dull%20explosion_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_EXPLOSIONS",
+    "source_file": "REAL/EXPLReal_Dull explosion_CS_USC.flac",
+    "cut": [
+     0.0,
+     1.3
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.4,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 1.3,
+     "peak_dbfs": -2.2,
+     "onset_s": 0.0,
+     "time_to_peak_s": 0.03,
+     "decay_to_minus30db_s": 0.81,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/impact_heavy_sharp.wav",
+    "title": "Heavy sharp explosion with reverb",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_EXPLOSIONS/REAL/EXPLReal_Heavy%20sharp%20explosion%20with%20reverb_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_EXPLOSIONS",
+    "source_file": "REAL/EXPLReal_Heavy sharp explosion with reverb_CS_USC.flac",
+    "cut": [
+     0.0,
+     1.6
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.5,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 1.6,
+     "peak_dbfs": -7.4,
+     "onset_s": 0.03,
+     "time_to_peak_s": 0.14,
+     "decay_to_minus30db_s": 1.21,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/impact_heavy_1.wav",
+    "title": "Single heavy explosions 1",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_EXPLOSIONS/REAL/EXPLReal_Single%20heavy%20explosions%201_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_EXPLOSIONS",
+    "source_file": "REAL/EXPLReal_Single heavy explosions 1_CS_USC.flac",
+    "cut": [
+     0.0,
+     1.8
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.6,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 1.8,
+     "peak_dbfs": -2.2,
+     "onset_s": 0.02,
+     "time_to_peak_s": 0.28,
+     "decay_to_minus30db_s": 1.27,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/impact_heavy_2.wav",
+    "title": "Single heavy explosions 2",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_EXPLOSIONS/REAL/EXPLReal_Single%20heavy%20explosions%202_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_EXPLOSIONS",
+    "source_file": "REAL/EXPLReal_Single heavy explosions 2_CS_USC.flac",
+    "cut": [
+     0.0,
+     1.6
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.5,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 1.6,
+     "peak_dbfs": -2.2,
+     "onset_s": 0.01,
+     "time_to_peak_s": 0.1,
+     "decay_to_minus30db_s": 1.37,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/impact_fist_crack.wav",
+    "title": "Fist crack; face punch",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_FIGHT/IMPACT/FGHTImpt_Fist%20crack%3B%20face%20punch_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_FIGHT",
+    "source_file": "IMPACT/FGHTImpt_Fist crack; face punch_CS_USC.flac",
+    "cut": [
+     0.0,
+     0.7
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.2,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.7,
+     "peak_dbfs": -9.6,
+     "onset_s": 0.02,
+     "time_to_peak_s": 0.03,
+     "decay_to_minus30db_s": 0.34,
+     "rises": true
+    }
+   }
+  ],
+  "pop": [
+   {
+    "file": "files/pop_cork.wav",
+    "title": "Comedy cartoon cork pop",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_CARTOON/POP/TOONPop_Comedy%20cartoon%20cork%20pop_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_CARTOON",
+    "source_file": "POP/TOONPop_Comedy cartoon cork pop_CS_USC.flac",
+    "cut": [
+     0.08,
+     0.6
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.15,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.52,
+     "peak_dbfs": -6.2,
+     "onset_s": 0.05,
+     "time_to_peak_s": 0.02,
+     "decay_to_minus30db_s": 0.27,
+     "rises": false
+    }
+   }
+  ],
+  "click": [
+   {
+    "file": "files/click_a.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     2.29,
+     2.49
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -5.6,
+     "onset_s": 0.0,
+     "time_to_peak_s": 0.04,
+     "decay_to_minus30db_s": 0.02,
+     "rises": true
+    }
+   },
+   {
+    "file": "files/click_b.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     12.66,
+     12.86
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -6.5,
+     "onset_s": 0.02,
+     "time_to_peak_s": 0.02,
+     "decay_to_minus30db_s": 0.07,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/click_c.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     15.8,
+     16.0
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -8.3,
+     "onset_s": 0.0,
+     "time_to_peak_s": 0.04,
+     "decay_to_minus30db_s": 0.12,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/click_d.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     10.47,
+     10.67
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -8.4,
+     "onset_s": 0.01,
+     "time_to_peak_s": 0.03,
+     "decay_to_minus30db_s": 0.08,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/click_e.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     8.19,
+     8.39
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -10.9,
+     "onset_s": 0.0,
+     "time_to_peak_s": 0.04,
+     "decay_to_minus30db_s": 0.06,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/click_f.wav",
+    "title": "Metal clicks; several takes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_MECHANICAL/CLICK/MECHClik_Metal%20clicks%3B%20several%20takes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_MECHANICAL",
+    "source_file": "CLICK/MECHClik_Metal clicks; several takes_CS_USC.flac",
+    "cut": [
+     6.47,
+     6.67
+    ],
+    "fade_in": 0.002,
+    "fade_out": 0.06,
+    "anchor": "onset",
+    "measured": {
+     "seconds": 0.2,
+     "peak_dbfs": -11.3,
+     "onset_s": 0.01,
+     "time_to_peak_s": 0.03,
+     "decay_to_minus30db_s": 0.11,
+     "rises": false
+    }
+   }
+  ],
+  "whoosh": [
+   {
+    "file": "files/whoosh_fireworks_1.wav",
+    "title": "Fireworks launching swooshes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SWOOSHES/WHOOSH/WHSH-FIREWORKS_Fireworks%20launching%20swooshes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SWOOSHES",
+    "source_file": "WHOOSH/WHSH-FIREWORKS_Fireworks launching swooshes_CS_USC.flac",
+    "cut": [
+     0.02,
+     0.95
+    ],
+    "fade_in": 0.03,
+    "fade_out": 0.25,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 0.93,
+     "peak_dbfs": -2.5,
+     "onset_s": 0.05,
+     "time_to_peak_s": 0.18,
+     "decay_to_minus30db_s": 0.52,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/whoosh_fireworks_2.wav",
+    "title": "Fireworks launching swooshes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SWOOSHES/WHOOSH/WHSH-FIREWORKS_Fireworks%20launching%20swooshes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SWOOSHES",
+    "source_file": "WHOOSH/WHSH-FIREWORKS_Fireworks launching swooshes_CS_USC.flac",
+    "cut": [
+     3.2,
+     4.1
+    ],
+    "fade_in": 0.03,
+    "fade_out": 0.25,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 0.9,
+     "peak_dbfs": -6.7,
+     "onset_s": 0.09,
+     "time_to_peak_s": 0.21,
+     "decay_to_minus30db_s": 0.48,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/whoosh_swish_a.wav",
+    "title": "Processed swishes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SWOOSHES/SWISH/SWSH_Processed%20swishes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SWOOSHES",
+    "source_file": "SWISH/SWSH_Processed swishes_CS_USC.flac",
+    "cut": [
+     8.467,
+     9.567
+    ],
+    "fade_in": 0.08,
+    "fade_out": 0.25,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 1.1,
+     "peak_dbfs": -8.4,
+     "onset_s": 0.01,
+     "time_to_peak_s": 0.56,
+     "decay_to_minus30db_s": 0.47,
+     "rises": true
+    }
+   },
+   {
+    "file": "files/whoosh_swish_b.wav",
+    "title": "Processed swishes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SWOOSHES/SWISH/SWSH_Processed%20swishes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SWOOSHES",
+    "source_file": "SWISH/SWSH_Processed swishes_CS_USC.flac",
+    "cut": [
+     15.675,
+     16.775
+    ],
+    "fade_in": 0.08,
+    "fade_out": 0.25,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 1.1,
+     "peak_dbfs": -8.7,
+     "onset_s": 0.01,
+     "time_to_peak_s": 0.58,
+     "decay_to_minus30db_s": 0.43,
+     "rises": false
+    }
+   },
+   {
+    "file": "files/whoosh_swish_c.wav",
+    "title": "Processed swishes",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SWOOSHES/SWISH/SWSH_Processed%20swishes_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SWOOSHES",
+    "source_file": "SWISH/SWSH_Processed swishes_CS_USC.flac",
+    "cut": [
+     16.764,
+     17.864
+    ],
+    "fade_in": 0.08,
+    "fade_out": 0.25,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 1.1,
+     "peak_dbfs": -8.7,
+     "onset_s": 0.02,
+     "time_to_peak_s": 0.55,
+     "decay_to_minus30db_s": 0.47,
+     "rises": true
+    }
+   },
+   {
+    "file": "files/whoosh_door.wav",
+    "title": "Original Star Trek door swish",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SCIFI/DOOR/SCIDoor_Original%20Star%20Trek%20door%20swish_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SCIFI",
+    "source_file": "DOOR/SCIDoor_Original Star Trek door swish_CS_USC.flac",
+    "cut": [
+     0.03,
+     1.0
+    ],
+    "fade_in": 0.02,
+    "fade_out": 0.12,
+    "anchor": "peak",
+    "measured": {
+     "seconds": 0.97,
+     "peak_dbfs": -3.1,
+     "onset_s": 0.08,
+     "time_to_peak_s": 0.43,
+     "decay_to_minus30db_s": 0.42,
+     "rises": false
+    }
+   }
+  ],
+  "riser": [
+   {
+    "file": "files/riser_takeoff.wav",
+    "title": "Classic spaceship fast takeoff",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SCIFI/RETRO/SCIRetro_Classic%20spaceship%20fast%20takeoff_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SCIFI",
+    "source_file": "RETRO/SCIRetro_Classic spaceship fast takeoff_CS_USC.flac",
+    "cut": [
+     2.2,
+     3.45
+    ],
+    "fade_in": 0.06,
+    "fade_out": 0.03,
+    "anchor": "end",
+    "measured": {
+     "seconds": 1.25,
+     "peak_dbfs": -6.8,
+     "onset_s": 0.0,
+     "time_to_peak_s": 1.2,
+     "decay_to_minus30db_s": null,
+     "rises": true
+    }
+   },
+   {
+    "file": "files/riser_takeoff_long.wav",
+    "title": "Classic spaceship fast takeoff",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SCIFI/RETRO/SCIRetro_Classic%20spaceship%20fast%20takeoff_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SCIFI",
+    "source_file": "RETRO/SCIRetro_Classic spaceship fast takeoff_CS_USC.flac",
+    "cut": [
+     1.3,
+     3.45
+    ],
+    "fade_in": 0.15,
+    "fade_out": 0.03,
+    "anchor": "end",
+    "measured": {
+     "seconds": 2.15,
+     "peak_dbfs": -6.8,
+     "onset_s": 0.03,
+     "time_to_peak_s": 2.07,
+     "decay_to_minus30db_s": null,
+     "rises": true
+    }
+   },
+   {
+    "file": "files/riser_magneto_swell.wav",
+    "title": "Magneto with speed manipulations",
+    "license": "CC0 1.0 Universal",
+    "author": "USC Cinema / Sunset Editorial sound-effects collection (tapes digitised by Craig Smith); uploaded to the Internet Archive by Jason Scott",
+    "url": "https://archive.org/download/SSE_Library_SCIFI/ENERGY/SCIEnrg_Magneto%20with%20speed%20manipulations_CS_USC.flac",
+    "page": "https://archive.org/details/SSE_Library_SCIFI",
+    "source_file": "ENERGY/SCIEnrg_Magneto with speed manipulations_CS_USC.flac",
+    "cut": [
+     3.12,
+     3.62
+    ],
+    "fade_in": 0.02,
+    "fade_out": 0.03,
+    "anchor": "end",
+    "measured": {
+     "seconds": 0.5,
+     "peak_dbfs": -9.6,
+     "onset_s": 0.3,
+     "time_to_peak_s": 0.1,
+     "decay_to_minus30db_s": null,
+     "rises": true
+    }
+   }
+  ]
+ },
+ "not_used": [
+  {
+   "src": "Pulsing rising machine sound",
+   "why": "rises only ~8 dB over 54 s; a 1-2 s cut does not rise"
+  },
+  {
+   "src": "gathering storm",
+   "why": "gets quieter over its 23 s; a rumble bed, not a riser"
+  },
+  {
+   "src": "light switches",
+   "why": "not in the plan list; contains footsteps"
+  }
+ ],
+ "rejected_by_measurement": [
+  {
+   "out": "impact_punch_fall",
+   "why": [
+    "slow attack (0.83s to peak)"
+   ]
+  }
+ ]
+}

@@ -1,10 +1,15 @@
 # clip-studio
 
-This repository holds one Claude Code skill, `podcast-clip-studio`.
+This repository holds two Claude Code skills, both for making vertical shorts from long video.
 
-It clips long podcasts, interviews and press conferences into vertical shorts, and was built while clipping real episodes for a paid campaign.
+| Skill | For | Style |
+|---|---|---|
+| `podcast-clip-studio` | clipping podcasts, interviews and press conferences for a paid campaign | calm, head-tracked reframe, 3-second cutaways, no sound effects |
+| `energetic-stream-edit` | viral-style shorts from streams, reactions and events | loud, colour-coded captions, zoom jumps, annotations, real sound effects |
 
-It finds the moments viewers actually replay, cuts a hook-first clip, reframes it with a head-tracking camera, adds relevant 3-second cutaways and burned-in captions, and runs a checklist before anything is exported. It pairs with Nate Herk's [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) for the tight cutting and captioning steps.
+The first finds the moments viewers replay, cuts a hook-first clip, reframes it with a head-tracking camera, adds relevant 3-second cutaways and burned-in captions, and runs a checklist before anything is exported. It pairs with Nate Herk's [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) for the tight cutting and captioning steps.
+
+The second was measured from six viral Shorts (cuts, zoom jumps, loudness, caption placement). It renders a plan file into a 1080x1920 clip with its own caption, motion, annotation, sound and loudness tools, and includes a self-test that builds and measures a throwaway clip.
 
 ## What it does
 
@@ -20,6 +25,8 @@ It finds the moments viewers actually replay, cuts a hook-first clip, reframes i
 ```bash
 git clone https://github.com/umid150708/clip-studio
 cp -R clip-studio/skills/podcast-clip-studio ~/.claude/skills/
+cp -R clip-studio/skills/energetic-stream-edit ~/.claude/skills/
+python3 -I ~/.claude/skills/energetic-stream-edit/scripts/selftest.py     # optional: checks the second skill on your machine
 ```
 
 Optional but recommended: install [herk-edit-kit](https://github.com/nateherkai/herk-edit-kit) so the `cut-silences`, `cut-mistakes` and `short-form-edit` skills are available.
@@ -35,11 +42,16 @@ Ask Claude something like:
 
 The skill will look up the moments, show you a ranked table, and wait before downloading anything.
 
+For the energetic style:
+> Make an energetic stream-style short from this clip, with coloured captions, zoom jumps and sound effects. Show me the plan before rendering.
+
+The second skill cannot hear audio, so play each clip once before posting.
+
 ## What was tested
-Every script in `scripts/` was run against real episodes during development, and the Crayo steps against a real account. What was **not** verified: other operating systems, other Crayo plans, and the audio of any export (the assistant cannot listen, so a human should play each clip once).
+Every script in `scripts/` was run against real episodes during development, and the Crayo steps against a real account. `energetic-stream-edit` was tested on synthetic footage and its own sound kit: unit checks, a self-test that renders and measures a clip with every feature on, and a fresh-copy run. What was **not** verified: other operating systems, other Crayo plans, and the audio of any export (the assistant cannot listen, so a human should play each clip once).
 
 ## Rights
 Clipping is only as clean as your permission to clip. Use sources you are allowed to use, credit them, flag any third-party footage, and never use another person's face or branding as your channel's identity. See `references/footage-and-rights.md`.
 
 ## Licence
-MIT for the original material in this repository (see `LICENSE`). `NOTICE.md` lists the tools and projects it works with.
+MIT for the original material in this repository (see `LICENSE`). `NOTICE.md` lists the tools and projects it works with, and the sound recordings in `energetic-stream-edit`, which are CC0 public domain.

@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: reports-a-missing-sound-kind
+expected_outcome: |
+  The kit has no boing and no rocket sound. The assistant checks the kit (for example with mixer.py report), says plainly which kinds are missing, does not substitute a different sound or synthesise one, and offers to fetch and cut suitable sounds after the user approves a download. Any sounds it does use are real kit clips.
